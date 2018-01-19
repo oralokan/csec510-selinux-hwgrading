@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Running submission $1"
+restorecon -v grader/submissions/$1.py
+grader/submissions/$1.py
+echo ""
+echo "DONE"

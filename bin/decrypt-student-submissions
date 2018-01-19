@@ -1,0 +1,11 @@
+#!/bin/bash
+mkdir -p grader/submissions
+rm -f grader/submissions/*
+for f in grader/inbox/*.py.gpg; do
+    filename=$(basename $f)
+    filename_nogpg=$(basename $filename .gpg)
+    gpg2 --decrypt --output grader/submissions/$filename_nogpg $f
+    chmod 700 grader/submissions/$filename_nogpg
+done
+
+echo "Student submissions decrypted and put in grader/submissions."

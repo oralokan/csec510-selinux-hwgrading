@@ -1,0 +1,4 @@
+#!/bin/bash
+bin/clean-gpg-key
+bin/disable-policy-module
+git clean -df

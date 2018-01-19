@@ -1,0 +1,4 @@
+grader/
+policy-module/
+!policy-module/hwgrading.te
+!policy-module/Makefile

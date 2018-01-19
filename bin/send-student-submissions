@@ -1,0 +1,8 @@
+#!/bin/bash
+mkdir -p grader/inbox
+rm -f grader/inbox/*
+for f in student/*.py; do
+    filename=$(basename $f)
+    gpg2 --encrypt --recipient Grader --output "grader/inbox/$filename.gpg" --armor $f
+done
+echo "Encrypted student submissions are in grader/inbox"

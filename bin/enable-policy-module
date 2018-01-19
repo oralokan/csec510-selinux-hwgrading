@@ -1,0 +1,4 @@
+#!/bin/bash
+cd policy-module
+make
+semodule -i hwgrading.pp
