@@ -1,2 +1,2 @@
 #!/bin/bash
-semodule -d hwgrading
+semodule -r hwgrading
